@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 243, 196);
+    font-size: 1.1rem;
+    font-family: "Madimi One", sans-serif;
+}
+
+/* --------------------------- color variables --------------------------- */
+  :root {
+    --theme-color1: #007524;
+    --theme-color2: #ffff00;
+  }
+
+/* --------------------------- Header --------------------------- */
+
+  header {
+    background-color: var(--theme-color1);
+  }
+
+  nav a {
+    color: var(--theme-color2) !important;
+    font-size: 1.4rem;
+  }
+
+  .navbar-toggler {
+    font-size: 1rem;
+    background-color: #faf9f6;
+  }
+
+/* --------------------------- Main Section --------------------------- */
+
+  .float-header {
+    background-color: var(--theme-color1);
+    color: var(--theme-color2);
+    border-radius: 5px;
+    margin-top: -3rem;
+    margin-bottom: 1.5rem;
+    padding: 8px;
+  }
+
+  .card {
+    background-color: #faf9f6;
+    margin: 5.3rem auto 3.5rem;
+  }
+
+  .card-body p {
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+
+  label {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+    color: var(--theme-color2);
+    background-color: var(--theme-color1);
+  }
