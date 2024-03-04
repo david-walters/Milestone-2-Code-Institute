@@ -25,6 +25,12 @@ html, body {
     color: var(--theme-color2) !important;
     font-size: 1.4rem;
     text-shadow: 2px 2px 2px black;
+    transition: all 0.15s;
+  }
+
+  nav a:hover {
+    scale: 1.1;
+    color: hsl(62 100% 60% / 1) !important;
   }
 
   nav > a {
@@ -82,6 +88,13 @@ html, body {
     color: var(--theme-color2);
     background-color: var(--theme-color1);
     text-shadow: 2px 2px 2px black;
+    transition: all 0.15s;
+  }
+
+  .btn:hover {
+    scale: 1.1;
+    color: hsl(62 100% 60% / 1);
+    background-color: hsl(138 100% 27% / 1);
   }
 
   /* --------------------------- Media Queries For Mobile --------------------------- */
