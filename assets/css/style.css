@@ -28,7 +28,7 @@ html, body {
     transition: all 0.15s;
   }
 
-  nav a:hover {
+  nav a:hover:not(.active) {
     scale: 1.1;
     color: hsl(62 100% 60% / 1) !important;
   }
@@ -43,12 +43,16 @@ html, body {
     height: auto;
 }
 
+  .active {
+    cursor: default;
+  }
+
   .navbar-toggler {
     font-size: 1.1rem;
     background-color: #faf9f6;
   }
 
-/* --------------------------- Main Section --------------------------- */
+/* --------------------------- Welcome Pop Up --------------------------- */
 
   .float-header {
     background-color: var(--theme-color1);
@@ -96,6 +100,10 @@ html, body {
     color: hsl(62 100% 60% / 1);
     background-color: hsl(138 100% 27% / 1);
   }
+
+  /* --------------------------- Question Container --------------------------- */
+
+
 
   /* --------------------------- Media Queries For Mobile --------------------------- */
 
