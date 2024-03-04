@@ -9,7 +9,7 @@ html, body {
     font-family: "Madimi One", sans-serif;
 }
 
-/* --------------------------- color variables --------------------------- */
+/* --------------------------- Color Variables --------------------------- */
   :root {
     --theme-color1: #007524;
     --theme-color2: #fbff7d;
@@ -27,8 +27,18 @@ html, body {
     text-shadow: 2px 2px 2px black;
   }
 
+  nav > a {
+    line-height: 58px;
+    font-size: 1.7rem;
+}
+
+   .nav-link img {
+    max-width: 60px;
+    height: auto;
+}
+
   .navbar-toggler {
-    font-size: 1rem;
+    font-size: 1.1rem;
     background-color: #faf9f6;
   }
 
@@ -73,3 +83,13 @@ html, body {
     background-color: var(--theme-color1);
     text-shadow: 2px 2px 2px black;
   }
+
+  /* --------------------------- Media Queries For Mobile --------------------------- */
+
+  @media screen and (max-width: 500px) {
+
+    .nav-link img {
+      margin-left: -20px;
+      max-width: 50px;
+  }
+}
