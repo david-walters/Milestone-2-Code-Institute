@@ -103,11 +103,16 @@ html, body {
 
   /* --------------------------- Question Container --------------------------- */
 
+  .answer-btn {
+    width: 12rem;
+    margin: 0.4rem;
+  }
+
 
 
   /* --------------------------- Media Queries For Mobile --------------------------- */
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 470px) {
 
     .nav-link img {
       margin-left: -20px;
