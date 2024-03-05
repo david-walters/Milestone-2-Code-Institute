@@ -67,7 +67,8 @@ html, body {
 
   .card {
     background-color: #faf9f6;
-    margin: 5.3rem auto 3.5rem;
+    margin: 4.5rem auto 1rem;
+    padding-bottom: 20px;
     box-shadow: var(--theme-color1) 0px 0px 2px 6px;
   }
 
@@ -102,6 +103,19 @@ html, body {
   }
 
   /* --------------------------- Question Container --------------------------- */
+
+  #image-container {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    background-image: url('../images/answer-images/elephant-poo.webp');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: var(--theme-color1) 0px 0px 1px 4px;
+  }
 
   .answer-btn {
     width: 12rem;
