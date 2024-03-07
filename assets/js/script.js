@@ -149,6 +149,8 @@ function showQuestion() {
         button.innerHTML = answer.text;
         button.classList.add("btn", "answer-btn");
         answerBtns.appendChild(button);
+        button.dataset.correct = answer.correct;
+        button.addEventListener('click', selectAnswer);
     })
 };
 
@@ -157,4 +159,16 @@ function resetState() {
     while(answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild);
     }
+}
+
+function selectAnswer(e) {
+    const selectedBtn = e.target;
+
+    if(selectedBtn.dataset.correct === "true") {
+        selectedBtn.classList.add('correct');
+    } else {
+        selectedBtn.classList.add('incorrect');
+    }
+
+    imageContainer.style.backgroundImage = questions[currentQuestionIndex].image2;
 }
