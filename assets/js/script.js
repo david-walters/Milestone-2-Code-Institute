@@ -169,15 +169,11 @@ function selectAnswer(e) {
     
     if (selectedBtn.dataset.correct === "true") {
         selectedBtn.classList.add('correct');
+        rightOrWrong.innerHTML = 'Correct!';
+        rightOrWrong.classList.add('correct');
         score++;
     } else {
         selectedBtn.classList.add('incorrect');
-    }
-
-    if (selectedBtn.dataset.correct === "true") {
-        rightOrWrong.innerHTML = 'Correct!';
-        rightOrWrong.classList.add('correct');
-    } else {
         rightOrWrong.innerHTML = 'Wrong!';
         rightOrWrong.classList.add('incorrect');
     }
@@ -192,5 +188,20 @@ function selectAnswer(e) {
         button.disabled = true;
 
         nextBtn.classList.remove('d-none');
+
+        if (currentQuestionIndex + 1 === questions.length) {
+            nextBtn.innerHTML = 'See Result';
+            
+        }
     })
 }
+
+nextBtn.addEventListener('click', () => {
+    rightOrWrong.classList.remove('correct', 'incorrect');
+    rightOrWrong.innerHTML = 'Who does the poo belong to?';
+
+    if (currentQuestionIndex < questions.length) {
+        currentQuestionIndex++;
+        showQuestion();
+    }
+})
