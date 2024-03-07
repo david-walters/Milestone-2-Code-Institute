@@ -169,6 +169,7 @@ function selectAnswer(e) {
     
     if (selectedBtn.dataset.correct === "true") {
         selectedBtn.classList.add('correct');
+        score++;
     } else {
         selectedBtn.classList.add('incorrect');
     }
