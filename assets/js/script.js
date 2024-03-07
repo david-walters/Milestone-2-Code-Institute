@@ -9,6 +9,7 @@ let nextBtn = document.getElementById('next-btn');
 let currentQuestionIndex = 0;
 let score = 0;
 let outOfTen = document.getElementById('out-of-ten');
+let rightOrWrong = document.getElementById('right-or-wrong');
 
 
 // Questions array containing the question image(image1), correct answer image(image2), and answers for the buttons.
@@ -164,10 +165,18 @@ function resetState() {
 function selectAnswer(e) {
     const selectedBtn = e.target;
 
-    if(selectedBtn.dataset.correct === "true") {
+    if (selectedBtn.dataset.correct === "true") {
         selectedBtn.classList.add('correct');
     } else {
         selectedBtn.classList.add('incorrect');
+    }
+
+    if (selectedBtn.dataset.correct === "true") {
+        rightOrWrong.innerHTML = 'Correct!';
+        rightOrWrong.classList.add('correct');
+    } else {
+        rightOrWrong.innerHTML = 'Wrong!';
+        rightOrWrong.classList.add('incorrect');
     }
 
     imageContainer.style.backgroundImage = questions[currentQuestionIndex].image2;

@@ -147,8 +147,9 @@ html, body {
   }
 
   .correct {
-    background-color: rgb(58 253 28);
+    background-color:rgb(71 239 46);
     color: black;
+    text-shadow: none;
   }
 
   .incorrect {
