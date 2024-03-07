@@ -137,6 +137,7 @@ startBtn.addEventListener('click', (event) => {
 });
 
 function showQuestion() {
+    resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
 
@@ -150,3 +151,10 @@ function showQuestion() {
         answerBtns.appendChild(button);
     })
 };
+
+function resetState() {
+    nextBtn.classList.add('d-none');
+    while(answerBtns.firstChild) {
+        answerBtns.removeChild(answerBtns.firstChild);
+    }
+}
