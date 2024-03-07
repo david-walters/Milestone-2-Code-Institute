@@ -1,28 +1,14 @@
 let welcomePopup = document.getElementById('welcome-popup');
-let questionContainer = document.getElementById('question-container');
 let startBtn = document.querySelector('button[type="submit"]');
-let imageContainer = document.getElementById('image-container');
-let nextBtn = document.getElementById('next-btn');
+let questionContainer = document.getElementById('question-container');
 let labelElement = document.querySelector('label');
 let username = document.getElementById('username');
-
-
-// The start button begins the game and stores the username value. If the username value is empty 
-// then the function will not execute and a warning will be displayed to the user.
-
-startBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    if (document.getElementById('username').value.trim() === '') {
-        username.style.border = '2px solid red';
-        labelElement.classList.add('attention');
-        return;
-    }
-
-    questionContainer.classList.remove('d-none');
-    welcomePopup.classList.add('d-none');
-    username = username.value;
-});
+let imageContainer = document.getElementById('image-container');
+let answerBtns = document.getElementById('answer-btns');
+let nextBtn = document.getElementById('next-btn');
+let currentQuestionIndex = 0;
+let score = 0;
+let outOfTen = document.getElementById('out-of-ten');
 
 
 // Questions array containing the question image(image1), correct answer image(image2), and answers for the buttons.
@@ -129,3 +115,38 @@ const questions = [
         ]
     },
 ];
+
+
+
+// The start button begins the game and stores the username value. If the username value is empty 
+// then the function will not execute and a warning will be displayed to the user.
+
+startBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (document.getElementById('username').value.trim() === '') {
+        username.style.border = '2px solid red';
+        labelElement.classList.add('attention');
+        return;
+    }
+
+    questionContainer.classList.remove('d-none');
+    welcomePopup.classList.add('d-none');
+    username = username.value;
+    showQuestion();
+});
+
+function showQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+
+    imageContainer.style.backgroundImage = currentQuestion.image1;
+    outOfTen.innerHTML = questionNo + '/10';
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn", "answer-btn");
+        answerBtns.appendChild(button);
+    })
+};

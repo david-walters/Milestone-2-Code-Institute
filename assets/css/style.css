@@ -127,7 +127,7 @@ html, body {
     max-width: 500px;
     height: 300px;
     margin: 0 auto;
-    background-image: url('../images/answer-images/elephant-poo.webp');
+    background-image: url('');
     background-size: cover;
     background-position: center;
     margin-bottom: 25px;
