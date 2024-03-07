@@ -161,10 +161,23 @@ html, body {
   }
 
   #next-btn {
+    width: 130px !important;
     width: 90px;
     margin: 20px auto 0;
   }
 
+  /* --------------------------- Results Container --------------------------- */
+
+  #result {
+    font-size: 2rem;
+    margin-top: 32px;
+  }
+
+  #result-message {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 34px 0;
+  }
 
   /* --------------------------- Media Queries For Mobile --------------------------- */
 

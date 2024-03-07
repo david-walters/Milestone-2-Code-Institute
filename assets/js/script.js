@@ -11,6 +11,8 @@ let score = 0;
 let outOfTen = document.getElementById('out-of-ten');
 let rightOrWrong = document.getElementById('right-or-wrong');
 let resultsContainer = document.getElementById('results-container');
+let finalResult = document.getElementById('result');
+let resultMessage = document.getElementById('result-message');
 
 
 // Questions array containing the question image(image1), correct answer image(image2), and answers for the buttons.
@@ -193,6 +195,7 @@ function selectAnswer(e) {
         if (currentQuestionIndex + 1 === questions.length) {
             nextBtn.innerHTML = 'See Result';
             nextBtn.addEventListener('click', () => {
+                showResults();
                 questionContainer.classList.add('d-none');
                 resultsContainer.classList.remove('d-none');
             })
@@ -209,3 +212,27 @@ nextBtn.addEventListener('click', () => {
         showQuestion();
     }
 })
+
+function showResults() {
+    let result, commentText;
+
+    result = `You scored ${score}/10!`;
+
+    switch (true) {
+        case (score <= 4):
+            commentText = `Terrible, ${username}, I'm never gonna trust you to offer me chocolate.`;
+            break;
+        case (score <= 6):
+            commentText = `Fair play, ${username} that's not a bad effort.`;
+            break;
+        case (score <= 9):
+            commentText = `Very impressive, ${username}! It seems like you know your stuff!`;
+            break;
+        default:
+            commentText = `Urmmm, ${username}... I'm actually concerned that you got all those correct...`;
+            break;
+    }
+
+    finalResult.innerHTML = result;
+    resultMessage.innerHTML = commentText;
+}
