@@ -163,8 +163,10 @@ function resetState() {
 }
 
 function selectAnswer(e) {
+    imageContainer.style.backgroundImage = questions[currentQuestionIndex].image2;
+    
     const selectedBtn = e.target;
-
+    
     if (selectedBtn.dataset.correct === "true") {
         selectedBtn.classList.add('correct');
     } else {
@@ -179,5 +181,15 @@ function selectAnswer(e) {
         rightOrWrong.classList.add('incorrect');
     }
 
-    imageContainer.style.backgroundImage = questions[currentQuestionIndex].image2;
+    Array.from(answerBtns.children).forEach(button => {
+        if (button.dataset.correct === 'true') {
+            button.classList.add('correct');
+        } else {
+            button.classList.add('incorrect');
+        }
+
+        button.disabled = true;
+
+        nextBtn.classList.remove('d-none');
+    })
 }
