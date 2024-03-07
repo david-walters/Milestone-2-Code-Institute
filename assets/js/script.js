@@ -13,6 +13,7 @@ let rightOrWrong = document.getElementById('right-or-wrong');
 let resultsContainer = document.getElementById('results-container');
 let finalResult = document.getElementById('result');
 let resultMessage = document.getElementById('result-message');
+let tryAgainBtn = document.getElementById('try-again-btn');
 
 
 // Questions array containing the question image(image1), correct answer image(image2), and answers for the buttons.
@@ -194,20 +195,22 @@ function selectAnswer(e) {
 
         if (currentQuestionIndex + 1 === questions.length) {
             nextBtn.innerHTML = 'See Result';
-            nextBtn.addEventListener('click', () => {
-                showResults();
-                questionContainer.classList.add('d-none');
-                resultsContainer.classList.remove('d-none');
-            })
+            nextBtn.addEventListener('click', handleResult)
         }
     })
 }
+
+const handleResult = () => {
+    showResults();
+    questionContainer.classList.add('d-none');
+    resultsContainer.classList.remove('d-none');
+};
 
 nextBtn.addEventListener('click', () => {
     rightOrWrong.classList.remove('correct', 'incorrect');
     rightOrWrong.innerHTML = 'Who does the poo belong to?';
 
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex + 1 < questions.length) {
         currentQuestionIndex++;
         showQuestion();
     }
@@ -236,3 +239,13 @@ function showResults() {
     finalResult.innerHTML = result;
     resultMessage.innerHTML = commentText;
 }
+
+tryAgainBtn.addEventListener('click', () => {
+    score = 0;
+    currentQuestionIndex = 0;
+    nextBtn.removeEventListener('click', handleResult);
+    nextBtn.innerHTML = 'Next';
+    resultsContainer.classList.add('d-none');
+    questionContainer.classList.remove('d-none');
+    showQuestion();
+})
