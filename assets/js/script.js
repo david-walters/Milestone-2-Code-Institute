@@ -10,6 +10,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 let outOfTen = document.getElementById('out-of-ten');
 let rightOrWrong = document.getElementById('right-or-wrong');
+let resultsContainer = document.getElementById('results-container');
 
 
 // Questions array containing the question image(image1), correct answer image(image2), and answers for the buttons.
@@ -191,7 +192,10 @@ function selectAnswer(e) {
 
         if (currentQuestionIndex + 1 === questions.length) {
             nextBtn.innerHTML = 'See Result';
-            
+            nextBtn.addEventListener('click', () => {
+                questionContainer.classList.add('d-none');
+                resultsContainer.classList.remove('d-none');
+            })
         }
     })
 }
