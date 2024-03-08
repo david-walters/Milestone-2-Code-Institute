@@ -106,6 +106,19 @@ html, body {
     color: rgb(255, 0, 0);
   }
 
+  label.attention-charset::before {
+    content: '* Min 20 characters (No numbers or special characters)';
+    width: 370px !important;
+    font-size: 0.88rem;
+    font-weight: 100;
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    top: 58.5%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 0, 0);
+  }
+
   .btn {
     font-size: 1.25rem;
     color: var(--theme-color2) !important;
@@ -186,5 +199,13 @@ html, body {
     .nav-link img {
       margin-left: -20px;
       max-width: 50px;
+  }
+
+  label.attention-charset::before {
+    width: 210px !important;
+  }
+
+  input {
+    margin-bottom: 35px;
   }
 }

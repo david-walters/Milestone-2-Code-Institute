@@ -14,7 +14,7 @@ let resultsContainer = document.getElementById('results-container');
 let finalResult = document.getElementById('result');
 let resultMessage = document.getElementById('result-message');
 let tryAgainBtn = document.getElementById('try-again-btn');
-
+let specialCharacters = /[!@#$£%=+%^&*/(),.?":{}|<>0-9]/;
 
 // Questions array containing the question image(image1), correct answer image(image2), and answers for the buttons.
 
@@ -129,17 +129,25 @@ const questions = [
 startBtn.addEventListener('click', (event) => {
     event.preventDefault();
 
-    if (document.getElementById('username').value.trim() === '') {
+    if (username.value.trim() === '') {
         username.style.border = '2px solid red';
+        labelElement.classList.remove('attention-charset');
         labelElement.classList.add('attention');
         return;
     }
 
-    questionContainer.classList.remove('d-none');
-    welcomePopup.classList.add('d-none');
-    username = username.value;
-    showQuestion();
-});
+    if (specialCharacters.test(username.value) || username.value.length > 20) {
+        username.style.border = '2px solid red';
+        labelElement.classList.remove('attention');
+        labelElement.classList.add('attention-charset');
+        return;
+    }
+
+        questionContainer.classList.remove('d-none');
+        welcomePopup.classList.add('d-none');
+        username = username.value.trim().replace(/\s+/g, ' ');
+        showQuestion();
+    });
 
 function showQuestion() {
     resetState();
