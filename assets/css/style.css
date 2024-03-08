@@ -23,7 +23,7 @@ html, body {
 
   nav a {
     color: var(--theme-color2) !important;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-shadow: 2px 2px 2px black;
     transition: all 0.15s;
   }
@@ -129,7 +129,7 @@ html, body {
   }
 
   .btn:hover:not([disabled]) {
-    scale: 1.1;
+    scale: 1.05;
     color: hsl(62 100% 60% / 1);
     background-color: hsl(138 100% 27% / 1);
   }
