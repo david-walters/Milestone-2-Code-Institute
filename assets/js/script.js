@@ -203,16 +203,10 @@ function selectAnswer(e) {
 
         if (currentQuestionIndex + 1 === questions.length) {
             nextBtn.innerHTML = 'See Result';
-            nextBtn.addEventListener('click', handleResult)
+            nextBtn.addEventListener('click', showResults)
         }
     })
 }
-
-const handleResult = () => {
-    showResults();
-    questionContainer.classList.add('d-none');
-    resultsContainer.classList.remove('d-none');
-};
 
 nextBtn.addEventListener('click', () => {
     rightOrWrong.classList.remove('correct', 'incorrect');
@@ -225,6 +219,9 @@ nextBtn.addEventListener('click', () => {
 })
 
 function showResults() {
+    questionContainer.classList.add('d-none');
+    resultsContainer.classList.remove('d-none');
+
     let result, commentText;
 
     result = `You scored ${score}/10!`;
@@ -251,7 +248,7 @@ function showResults() {
 tryAgainBtn.addEventListener('click', () => {
     score = 0;
     currentQuestionIndex = 0;
-    nextBtn.removeEventListener('click', handleResult);
+    nextBtn.removeEventListener('click', showResults);
     nextBtn.innerHTML = 'Next';
     resultsContainer.classList.add('d-none');
     questionContainer.classList.remove('d-none');
