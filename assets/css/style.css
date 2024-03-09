@@ -213,3 +213,76 @@ html, body {
     width: 12rem;
   }
 }
+
+/* --------------------------- Media Queries For The Galaxy Fold --------------------------- */
+
+@media screen and (max-width: 282px) {
+
+  body {
+    font-size: 1rem;
+  }
+
+  .navbar-toggler {
+    margin-right: 5px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+  nav > a {
+    line-height: 50px;
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    padding: 18px !important;
+  }
+
+  #results-container h2 {
+    font-size: 1.7rem;
+  }
+
+  #image-container {
+    height: 185px;
+  }
+
+  input {
+    width: 200px;
+  }
+
+  #out-of-ten {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+
+  #results-container .btn {
+    width: 120px;
+  }
+
+  .answer-btn {
+    width: 10.8rem;
+  }
+
+  .btn {
+    padding: 4px;
+  }
+
+  #result {
+    font-size: 1.4rem;
+    margin-top: 25px;
+    font-weight: 600;
+  }
+
+  #result-message {
+    font-size: 1.05rem;
+  }
+
+  .card-body p {
+    font-weight: 500;
+}
+}
