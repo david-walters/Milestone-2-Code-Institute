@@ -52,6 +52,12 @@ html, body {
     background-color: #faf9f6;
   }
 
+  /* --------------------------- Footer --------------------------- */
+
+  footer a {
+    color: var(--theme-color1);
+  }
+
 /* --------------------------- Welcome Pop Up --------------------------- */
 
   .float-header {
