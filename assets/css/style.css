@@ -36,7 +36,7 @@ link[rel="shortcut icon"] {
   }
 
   nav a:hover:not(.active) {
-    scale: 1.1;
+    transform: scale(1.1);
     color: hsl(62 100% 60% / 1) !important;
   }
 
@@ -144,7 +144,7 @@ link[rel="shortcut icon"] {
   }
 
   .btn:hover:not([disabled]) {
-    scale: 1.05;
+    transform: scale(1.05);
     color: hsl(62 100% 60% / 1);
     background-color: hsl(138 100% 27% / 1);
   }
