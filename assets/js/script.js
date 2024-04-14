@@ -76,7 +76,7 @@ const questions = [
             {text: "Eagle", correct: false},
             {text: "Cat", correct: false},
             {text: "Seagull", correct: true},
-            {text: "Penguine", correct: false}
+            {text: "Penguin", correct: false}
         ]
     },
     {
