@@ -9,6 +9,13 @@ html, body {
     font-family: "Madimi One", sans-serif;
 }
 
+/* --------------------------- Favicon Image Size --------------------------- */
+
+link[rel="shortcut icon"] {
+  width: 48px;
+  height: 48px;
+}
+
 /* --------------------------- Color Variables --------------------------- */
   :root {
     --theme-color1: #007524;
