@@ -122,9 +122,9 @@ const questions = [
 ];
 
 
-
-// The start button begins the game and stores the username value. If the username value is empty 
-// then the function will not execute and a warning will be displayed to the user.
+/*  The start button begins the game and stores the username value. If the username value is empty 
+    then the function will not execute and a warning will be displayed to the user.
+    It will also execute the showQuestion function. */
 
 startBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -148,6 +148,12 @@ startBtn.addEventListener('click', (event) => {
         username = username.value.trim().replace(/\s+/g, ' ');
         showQuestion();
     });
+
+
+/*  The showQuestion function will display the the questions (images and answer buttons) by accessing their array index.
+    It will also create answer buttons with the relative answers as the buttons' text and apply the selectAnswer function with
+    a click event listener to each answer button. It will also execute the resetState function, which will remove 
+    all the previous answer buttons from the previous question. */
 
 function showQuestion() {
     resetState();
@@ -174,18 +180,25 @@ function resetState() {
     }
 }
 
+
+/*  The selectAnswer function will add the Correct or Incorrect CSS class respectively to the selected answer.
+    It will also change the image1 (the question image) to image2 (the answer image).
+    The heading text will change to Correct or Wrong respectively.
+    All answer buttons will become disabled.
+    The Next button will become displayed.
+    If the currentQuestion index has reached its max length, the next button will have the text "See result" and
+    will have the showResults function added to it as a click event listener. */
+
 function selectAnswer(e) {
     imageContainer.style.backgroundImage = questions[currentQuestionIndex].image2;
     
     const selectedBtn = e.target;
     
     if (selectedBtn.dataset.correct === "true") {
-        selectedBtn.classList.add('correct');
         rightOrWrong.innerHTML = 'Correct!';
         rightOrWrong.classList.add('correct');
         score++;
     } else {
-        selectedBtn.classList.add('incorrect');
         rightOrWrong.innerHTML = 'Wrong!';
         rightOrWrong.classList.add('incorrect');
     }
@@ -208,6 +221,11 @@ function selectAnswer(e) {
     })
 }
 
+
+/*  The next button will have a click event listener which will reset the heading to display the question
+    "Who does the poo belong to?", and will execute the showQuestion function after incrementing the 
+    currentQuestion index (if currentQuestion index has not reached its length). */
+
 nextBtn.addEventListener('click', () => {
     rightOrWrong.classList.remove('correct', 'incorrect');
     rightOrWrong.innerHTML = 'Who does the poo belong to?';
@@ -217,6 +235,11 @@ nextBtn.addEventListener('click', () => {
         showQuestion();
     }
 })
+
+
+/*  The showResults function removes the questionContainer and displayes the resultsContainer.
+    It will display the score of the user and will provide a condition based comment for the user in respective 
+    to how much they scored. */
 
 function showResults() {
     questionContainer.classList.add('d-none');
@@ -244,6 +267,12 @@ function showResults() {
     finalResult.innerHTML = result;
     resultMessage.innerHTML = commentText;
 }
+
+
+/*  The Try Again button will have a click event listener which will basically reset the whole game to be played again.
+    It will reset score to 0, currentQuestionIndex to 0, remove the showResults event listener from the Next button,
+    change the text of the next button from "See Results" back to "Next", hide the resultsContainer and reveal
+    the question container, and finally execute the showQuestion function. */
 
 tryAgainBtn.addEventListener('click', () => {
     score = 0;
