@@ -49,7 +49,7 @@ I have created an interesting quiz game with images to demonstrate my ability wi
 
 ---
 
-![The logo](assets/images/readme-images/logo.PNG)
+![The logo](assets/images/readme-images/logo.png)
 
 ## User Experience (UX)
 
