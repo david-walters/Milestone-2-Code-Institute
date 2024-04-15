@@ -132,7 +132,7 @@ All Pages on the website are responsive and have:
 
 - A favicon in the browser tab.
 
-  ![favicon](assets/images/poop-emoji.webp)
+  ![favicon](assets/images/readme-images/favicon.png)
 
 - A logo in the top left. This logo also acts as a link back to the home page or a refresh button in case there were any issues.
 
