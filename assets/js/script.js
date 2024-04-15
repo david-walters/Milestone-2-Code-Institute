@@ -170,8 +170,8 @@ function showQuestion() {
         answerBtns.appendChild(button);
         button.dataset.correct = answer.correct;
         button.addEventListener('click', selectAnswer);
-    })
-};
+    });
+}
 
 function resetState() {
     nextBtn.classList.add('d-none');
@@ -216,9 +216,9 @@ function selectAnswer(e) {
 
         if (currentQuestionIndex + 1 === questions.length) {
             nextBtn.innerHTML = 'See Result';
-            nextBtn.addEventListener('click', showResults)
+            nextBtn.addEventListener('click', showResults);
         }
-    })
+    });
 }
 
 
@@ -234,7 +234,7 @@ nextBtn.addEventListener('click', () => {
         currentQuestionIndex++;
         showQuestion();
     }
-})
+});
 
 
 /*  The showResults function removes the questionContainer and displayes the resultsContainer.
@@ -282,4 +282,4 @@ tryAgainBtn.addEventListener('click', () => {
     resultsContainer.classList.add('d-none');
     questionContainer.classList.remove('d-none');
     showQuestion();
-})
+});
