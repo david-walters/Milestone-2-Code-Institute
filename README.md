@@ -1,8 +1,8 @@
-# My JS Quiz — Guess Poo!
+# My JS Quiz: Guess Poo!
 
 ![My JS quiz shown on a variety of screen sizes](assets/images/readme-images/start-game-page.png)
 
-Visit the deployed site: [My Online Portfolio](https://david-walters.github.io/Milestone-2-Code-Institute/)
+Visit the deployed site: [My JS Quiz!](https://david-walters.github.io/Milestone-2-Code-Institute/)
 
 I have created an interesting quiz game with images to demonstrate my ability with JavaScript.
 
@@ -94,9 +94,9 @@ I used CSS colour variables to make accessing the colours easier throughout the 
 
 ### Typography
 
-Google Fonts was used to import the Madimi |One font for this site.
+Google Fonts was used to import the Madimi One font for this site.
 
-- For the nav elements, game title, headings, footer, and button text, I used the google font [Madimi One](https://fonts.google.com/specimen/Madimi+One?preview.text=Welcome%20to%20my%20Quiz%20Game!&query=madimi).
+For the nav elements, game title, headings, footer, and button text, I used the google font [Madimi One](https://fonts.google.com/specimen/Madimi+One?preview.text=Welcome%20to%20my%20Quiz%20Game!&query=madimi).
 
 Madimi One is a typeface designed by Jeremy Mickel for Google Fonts. It belongs to the serif category and has a modern, geometric style. The font features clean lines, rounded corners, and a balanced appearance, making it suitable for various design projects, including web design, print materials, and branding.
 
@@ -106,7 +106,7 @@ One of the notable characteristics of Madimi One is its legibility, even at smal
 
 For the rest of the text on the site, I used the CSS font-family sans-serif font that every browser should be compatible with. This CSS rule tells the browser to use the default sans-serif font available on the user's system. If Arial is available, it will be used; otherwise, the browser will use another sans-serif font available on the system.
 
-Sans-serif fonts are characterized by their lack of serifs, which are the small decorative strokes or tails found at the ends of characters in serif fonts. The absence of these serifs gives sans-serif fonts a clean and modern appearance and are easy to read.
+Sans-serif fonts are characterized by their lack of serifs, which are the small decorative strokes or tails found at the ends of characters in serif fonts. The absence of these serifs gives sans-serif fonts a clean and modern appearance which makes it easier to read.
 
 ### Imagery
 
@@ -126,15 +126,15 @@ Wireframes were created using Figma.
 
 ### Features
 
-The website is comprised of a home page, an about me page, a contact page, and a portfolio page.
+The website is comprised of two pages only; index page and the How To Play page. The question container and results page are displayed through the index page using JS.
 
-All Pages on the website are responsive and have:
+Both Pages on the website are responsive and have:
 
 - A favicon in the browser tab.
 
   ![favicon](assets/images/readme-images/favicon.png)
 
-- A logo in the top left. This logo also acts as a link back to the home page or a refresh button in case there were any issues.
+- A logo in the top left. This logo also acts as a link back to the index page or a refresh button in case there were any issues.
 
   ![Logo](assets/images/readme-images/logo.png)
 
@@ -144,7 +144,7 @@ All Pages on the website are responsive and have:
 
 #### How To Play Page
 
-The How To Play page literally explains to the user how to play. It states that image of an animal poo will show and the user has to select one of the foor answers. There are ten to do in total.
+The How To Play page literally explains to the user how to play. It states that an image of an animal poo will show and the user has to select one of the four answers, and that there are ten questions in total.
 
 ![How To Play Page](assets/images/readme-images/how-to-play-page.png)
 
@@ -170,9 +170,9 @@ Once the final question has been answered, instead of a Next button being reveal
 
 In future implementations I would like to:
 
-1. Add more more images to the game.
+1. Add more images to the game.
 2. Make questions and answer buttons appear in a random order.
-3. Have a bank of questions that randomly have ten chosen from them eavh time it is played.
+3. Have a bank of questions that randomly have ten chosen from them each time it is played.
 
 ### Accessibility
 
@@ -252,7 +252,7 @@ The hosting platform that I've used for my project is GitHub Pages. To deploy my
 3. Add all files to the staging area using the `git add .` command.
 4. Commit the files using the `git commit -m "First commit"` command.
 5. Create a new repository in GitHub called 'Milestone-1'.
-6. Copy the code withe the origin that GitHub provides and paste into the terminal window:
+6. Copy the code with the origin that GitHub provides and paste into the terminal window:
 
    ```
    git remote add origin https://https://github.com/david-walters/Milestone-2-Code-Institute.git
