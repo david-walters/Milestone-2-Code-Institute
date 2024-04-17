@@ -1,8 +1,8 @@
-# My Quiz Game: Testing
+# My JS Quiz: Guess Poo! — Testing
 
 ![The Quiz Arms shown on a variety of screen sizes](assets/images/readme-images/start-game-page.png)
 
-Visit the deployed site: [My Online Portfolio](https://david-walters.github.io/Milestone-2-Code-Institute/)
+Visit the deployed site: [My JS Quiz: Guess Poo!](https://david-walters.github.io/Milestone-2-Code-Institute/)
 
 ---
 
