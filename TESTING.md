@@ -27,11 +27,14 @@ I have gone through each page using google chrome developer tools & Firefox insp
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on both pages of the website. It was also used to validate the CSS.
 
-- [index.html](assets/images/test-images/w3-index.png) - Passed/No-errors.
+- [index.html](assets/images/test-images/w3-index.png) - Passed/No-errors
 - [how-to-play.html](assets/images/test-images/w3-how-to-play.png) - Passed/No-errors
 - [styles.css](assets/images/test-images/w3-css.png) - Passed/No-errors
 
-The script.js file was also tested on numerous validators and each validator had it's own opinion on recommended fixes but no major issues were found. One validator said that I should have used double quotes in so many places, but single quotes are completely fine and they do not effect the code any differently. Google dev tools shows no errors at all.
+The script.js file was also tested on numerous validators and each validator had it's own opinion on recommended fixes but no major issues were found.
+JSHint gave 33 warnings. None of which are majore warnings. All of the warnings are stating that the code I used is only recognisable with ES6.
+
+- [JSHint](assets/images/test-images/jshint.png) - 33 Warnings
 
 ---
 
