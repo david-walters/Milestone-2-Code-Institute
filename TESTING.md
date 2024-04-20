@@ -31,8 +31,9 @@ I have gone through each page using google chrome developer tools & Firefox insp
 - [how-to-play.html](assets/images/test-images/w3-how-to-play.png) - Passed/No-errors
 - [styles.css](assets/images/test-images/w3-css.png) - Passed/No-errors
 
-The script.js file was also tested on numerous validators and each validator had it's own opinion on recommended fixes but no major issues were found.
-JSHint gave 33 warnings. None of which are majore warnings. All of the warnings are stating that the code I used is only recognisable with ES6.
+The script.js file was also tested on numerous JS validators and each validator had its own opinion on recommended fixes but no major issues were found.
+
+JSHint gave 33 warnings—none of which are major warnings. All of the warnings are stating that the code I used is only recognisable with ES6.
 
 - [JSHint](assets/images/test-images/jshint.png) - 33 Warnings
 
